@@ -1,0 +1,11 @@
+{
+  "iconDefinitions": {
+    "_tad_file": {
+      "iconPath": "../icons/tad-icon.svg"
+    }
+  },
+
+  "fileExtensions": {
+    "tad": "_tad_file"
+  }
+}

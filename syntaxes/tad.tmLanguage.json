@@ -1,0 +1,54 @@
+{
+  "name": "Tad",
+  "scopeName": "source.tad",
+  "patterns": [
+    { "include": "#strings" },
+    { "include": "#keywords" },
+    { "include": "#booleans" },
+    { "include": "#numbers" },
+    { "include": "#predefined_functions" },
+    { "include": "#function_calls" },
+    { "include": "#operators" },
+    { "include": "#identifiers" }
+  ],
+  "repository": {
+    "strings": {
+      "match": "\"([^\"\\\\]|\\\\.)*\"",
+      "name": "string.quoted.double.tad"
+    },
+    "keywords": {
+      "match": "\\b(while|if|else|function|return|stop|do|then|returns)\\b",
+      "name": "keyword.control.tad"
+    },
+    "booleans": {
+      "match": "\\b(true|false)\\b",
+      "name": "constant.language.tad"
+    },
+    "numbers": {
+      "match": "\\b[0-9]+(\\.[0-9]+)?\\b",
+      "name": "constant.numeric.tad"
+    },
+    "predefined_functions": {
+      "match": "(\\.)(mean|read)(?=\\()",
+      "captures": {
+        "1": { "name": "punctuation.accessor.tad" },
+        "2": { "name": "support.function.tad" }
+      }
+    },
+    "function_calls": {
+      "match": "\\b([A-Za-z_][A-Za-z0-9_]*)(\\s*\\()",
+      "captures": {
+        "1": { "name": "entity.name.function.tad" },
+        "2": { "name": "punctuation.brackets.tad" }
+      }
+    },
+    "operators": {
+      "match": "(\\+|-|\\*|\\^|\\/|\\b(and|or|not)\\b)",
+      "name": "keyword.operator.tad"
+    },
+    "identifiers": {
+      "match": "[A-Za-z_][A-Za-z0-9_]*",
+      "name": "variable.name.tad"
+    }
+  }
+}

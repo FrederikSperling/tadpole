@@ -1,0 +1,50 @@
+{
+  "name": "tadpole",
+  "displayName": "Tadpole",
+  "description": "To run code written in tadpole",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.120.0"
+  },
+  "activationEvents": ["onLanguage:tad"],
+  "contributes": {
+      "iconThemes": [
+    {
+      "id": "tad-icons",
+      "label": "Tad Icons",
+      "path": "./fileicons/myicon.json"
+    }
+  ],
+    "languages": [
+      {
+        "id": "tad",
+        "displayName": "Tad",
+        "extensions": [".tad"]
+      }
+    ],
+    "commands": [
+      {
+        "command": "tadpole.runFile",
+        "title": "Run Tad File",
+        "icon": "$(play)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "tadpole.runFile",
+          "when": "resourceExtname == .tad",
+          "group": "navigation"
+        }
+      ]
+    },
+    "grammars": [
+  {
+    "language": "tad",
+    "scopeName": "source.tad",
+    "path": "./syntaxes/tad.tmLanguage.json"
+  }
+]
+  },
+  "main": "./extension.js"
+}
