@@ -12,7 +12,7 @@ function activate(context) {
     const fileName = path.basename(filePath);
 
     terminal.show();
-    terminal.sendText(`tadpole ${fileName}`);
+    terminal.sendText(`.\tadpole ${fileName}`);
   });
 
   context.subscriptions.push(runCommand);
@@ -107,7 +107,7 @@ function activate(context) {
       const word = document.getText(range);
 
       const functions = {
-        read: 'Read from a csv file',
+        read: 'Read from a csv file @return {tbl}',
         length: 'Returns the length of a list or string',
         tostring: 'Converts a value to a string'
       };

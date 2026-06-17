@@ -6,20 +6,24 @@
   "engines": {
     "vscode": "^1.120.0"
   },
-  "activationEvents": ["onLanguage:tad"],
-  "contributes": {
-      "iconThemes": [
-    {
-      "id": "tad-icons",
-      "label": "Tad Icons",
-      "path": "./fileicons/myicon.json"
-    }
+  "activationEvents": [
+    "onLanguage:tad"
   ],
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "tad-icons",
+        "label": "Tad Icons",
+        "path": "./fileicons/myicon.json"
+      }
+    ],
     "languages": [
       {
         "id": "tad",
         "displayName": "Tad",
-        "extensions": [".tad"]
+        "extensions": [
+          ".tad"
+        ]
       }
     ],
     "commands": [
@@ -39,12 +43,15 @@
       ]
     },
     "grammars": [
-  {
-    "language": "tad",
-    "scopeName": "source.tad",
-    "path": "./syntaxes/tad.tmLanguage.json"
-  }
-]
+      {
+        "language": "tad",
+        "scopeName": "source.tad",
+        "path": "./syntaxes/tad.tmLanguage.json"
+      }
+    ]
   },
-  "main": "./extension.js"
+  "main": "./extension.js",
+  "dependencies": {
+    "vsce": "^2.15.0"
+  }
 }
