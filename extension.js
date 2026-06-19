@@ -12,7 +12,7 @@ function activate(context) {
     const fileName = path.basename(filePath);
 
     terminal.show();
-    terminal.sendText(`.\\tadpole ${fileName}`);
+    terminal.sendText(`./tadpole ${fileName}`);
   });
 
   context.subscriptions.push(runCommand);
