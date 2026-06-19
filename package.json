@@ -3,24 +3,28 @@
   "displayName": "Tadpolechads",
   "publisher": "TadpoleOrg",
   "description": "To run code written in tadpole",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "engines": {
     "vscode": "^1.120.0"
   },
-  "activationEvents": ["onLanguage:tad"],
-  "contributes": {
-      "iconThemes": [
-    {
-      "id": "tad-icons",
-      "label": "Tad Icons",
-      "path": "./fileicons/myicon.json"
-    }
+  "activationEvents": [
+    "onLanguage:tad"
   ],
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "tad-icons",
+        "label": "Tad Icons",
+        "path": "./fileicons/myicon.json"
+      }
+    ],
     "languages": [
       {
         "id": "tad",
         "displayName": "Tad",
-        "extensions": [".tad"]
+        "extensions": [
+          ".tad"
+        ]
       }
     ],
     "commands": [
@@ -40,13 +44,12 @@
       ]
     },
     "grammars": [
-  {
-    "language": "tad",
-    "scopeName": "source.tad",
-    "path": "./syntaxes/tad.tmLanguage.json"
-  }
-]
+      {
+        "language": "tad",
+        "scopeName": "source.tad",
+        "path": "./syntaxes/tad.tmLanguage.json"
+      }
+    ]
   },
   "main": "./extension.js"
 }
-
