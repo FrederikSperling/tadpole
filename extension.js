@@ -106,11 +106,23 @@ function activate(context) {
       const range = document.getWordRangeAtPosition(position);
       const word = document.getText(range);
 
-      const functions = {
-        read: 'Read from a csv file',
-        length: 'Returns the length of a list or string',
-        tostring: 'Converts a value to a string'
-      };
+  const functions = {
+      read: `
+    (Function) read (
+          Path: URL | Relative filepath
+          )  -> 'tbl'
+
+    Reads a CSV file and converts it into a Tadpole table.
+
+    **Parameters**
+    - \`Path\`: The url to a CSV file. | The relative path to a CSV file.
+
+    **Returns**
+    A table containing the data from the CSV file.
+    `,
+      length: 'Returns the length of a list or string',
+      tostring: 'Converts a value to a string'
+    };
 
       if (functions[word]) {
         return new vscode.Hover(
